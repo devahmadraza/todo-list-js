@@ -3,76 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App</title>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Heading -->
-<h1>Todo List </h1>
+    <div class="todo-container">
+        <h1>My Tasks</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Type Task Name">
+            <button type="submit" id="add-btn">Add</button>
+        </form>
+        
+        <ul id="todo-list"></ul>
+    </div>
 
-<form action="" id="todo-form">
-<input type="text" id="todo-input">
-
-<!-- Todo Add Button -->
-<button id="add-btn">Add</button>
-</form>
-
-<!-- List will Display in this field  -->
-<ul id="todo-list">
-    
-</ul>
-<!-- <script src="./script.js"></script> -->
-<script src="./practice.js"></script>
+    <script src="practice.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-    <h1 class="heading">Todo List</h1>
-    <div class="todo">
-        <label for="task">Task:</label><br>
-        <input type="text" title="task" id="task" placeholder="Enter Task">
-    </div>
-    <div class="btn">
-    <Button class="add-btn mbtn">Add New Task</Button>
-    <Button class="del-btn mbtn">Delete Task</Button>
-</div>
-<div>
-<h3>Task </h3>
-    
-</div>
-
-</body>
-
-</html> -->
