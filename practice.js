@@ -15,6 +15,7 @@ function createTodoNode(todo, index) {
     const li = document.createElement('li')
     const textspan = document.createElement('span')
     textspan.textContent = todo.text
+    
     const checkbox = document.createElement('input')
     checkbox.type = 'checkbox'
     checkbox.checked = !!todo.completed
@@ -55,6 +56,23 @@ function createTodoNode(todo, index) {
 }
 function render() {
     list.innerHTML = ''
+
+    
+    if (todos.length === 0) {
+        const emptyNotice = document.createElement('li')
+        emptyNotice.textContent = '🎉 No tasks left! Add one above.'
+        emptyNotice.style.color = '#888'
+        emptyNotice.style.fontStyle = 'italic'
+        emptyNotice.style.listStyleType = 'none'
+        
+        // FIXED 1: Clip the notice element into the actual HTML list container
+        list.appendChild(emptyNotice)
+        
+        // FIXED 2: Exit early so the code below doesn't execute
+        return 
+    }
+
+
     todos.forEach((todo, index) => {
         const node = createTodoNode(todo, index)
         list.appendChild(node)
@@ -71,6 +89,5 @@ function addtodo() {
     savedtodos()
     render()
 }
-
 add.addEventListener('click', addtodo)
 render()
